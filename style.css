@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Six+Caps&display=swap");
+
+* {
+  /* css reset on margin / padding on html elements to get rid of their default margin / paddings
+    applied by the browser
+  */
+  margin: 0;
+  padding: 0;
+  /* Box sizing reference  https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing */
+  box-sizing: border-box;
+}
+
+html {
+  color: white;
+
+  font-family: "Roboto", sans-serif;
+}
+
+.main {
+  text-align: center;
+}
+
+.title {
+  margin: 20px auto;
+  color: rgb(48, 48, 48);
+}
+
+#launch-pad {
+  user-select: none;
+  background-color: rgb(252, 190, 18);
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/grid  */
+  /* Here is a guide explaining the css grid system  https://css-tricks.com/snippets/css/complete-guide-grid */
+  display: grid;
+  grid-template-columns: repeat(4, 110px);
+  grid-template-rows: repeat(5, 110px);
+  column-gap: 5px;
+  row-gap: 5px;
+  justify-content: center;
+  width: min-content;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.pad {
+  background-color: rgb(61, 184, 13);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 8px solid rgb(19, 210, 239); */
+}
+
+.pad.active {
+  background-color: #33c3ff;
+}
+
+.pad:active {
+  background-color: rgb(252, 18, 249);
+}
+
+.logos {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/flex */
+  /* And here is a guide explaining the css flexbox https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: rgb(18, 252, 221);
+  padding: 20px;
+  color: black;
+  border-radius: 4px;
+}
+
+.brand {
+  font-size: 40px;
+  font-family: "Six Caps";
+  letter-spacing: 7px;
+  margin-right: 20px;
+}
+
+.logos img {
+  width: 100px;
+  padding: 10px;
+  height: auto;
+}
+
+.created {
+	margin-top: 50px;
+	text-align: center;
+}
+
+h2 {
+	color: red;
+}
